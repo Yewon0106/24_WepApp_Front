@@ -60,34 +60,64 @@ const PutClothes = (props) => {
     }
 
     return (
-        <Grid container style={{ marginTop: 20 }}>
-            <Grid item xs={6} md={6} style={{ margin: 20 }}>
-                <Grid item xs={12}>
-                    title:
-                    <TextField name="title" value={item.title} onChange={onInputChange} style={{marginLeft:20}}></TextField>
-                </Grid>
-                <br/>
-                <Grid item xs={12}>
-                    category:
-                    <TextField name="category" value={item.category} onChange={onInputChange} style={{marginLeft:20}}/>
-                </Grid>
-                <br/>
-                <Grid item xs={12}>
-                    price:
-                    <TextField name="price" value={item.price} onChange={onInputChange} style={{marginLeft:20}}/>
-                </Grid>
-                <br/>
-                <Grid item xs={12}>
-                    userId:
-                    <TextField name="userId" value={item.userId} onChange={onInputChange} style={{marginLeft:20}}/>
-                </Grid>
-                <Grid item xs={12}>
-                    <Button onClick={onSearchClick} variant="contained" color="warning" style={{margin:10}}>
-                        제품 검색
-                    </Button>
-                    <Button onClick={onButtonClick} variant="contained" color="warning" style={{margin:10}}>
-                        제품 수정
-                    </Button>
+        <Grid container justifyContent="center" style={{ marginTop: 20 }}>
+            <Grid item xs={12} md={6} style={{ margin: 10 }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                        
+                        <TextField
+                            name="title"
+                            value={item.title}
+                            onChange={onInputChange}
+                            label="Title"
+                            variant="outlined"
+                            fullWidth
+                        />
+                    </Grid>
+                    <Grid item xs={12} >
+                        
+                        <TextField
+                            name="category"
+                            value={item.category}
+                            onChange={onInputChange}
+                            label="Category"
+                            variant="outlined"
+                            fullWidth
+                            margin="normal"
+                        />
+                    </Grid>
+                    <Grid item xs={12} >
+                        
+                        <TextField
+                            name="price"
+                            value={item.price}
+                            onChange={onInputChange}
+                            label="Price"
+                            variant="outlined"
+                            fullWidth
+                            margin="normal"
+                        />
+                    </Grid>
+                    <Grid item xs={12} >
+                        
+                        <TextField
+                            name="userId"
+                            value={item.userId}
+                            onChange={onInputChange}
+                            label="User ID"
+                            variant="outlined"
+                            fullWidth
+                            margin="normal"
+                        />
+                    </Grid>
+                    <Grid item xs={12} container justifyContent="space-between">
+                        <Button onClick={onSearchClick} variant="contained" color="warning" style={{ margin: 10 }}>
+                            제품 검색
+                        </Button>
+                        <Button onClick={onButtonClick} variant="contained" color="warning" style={{ margin: 10 }}>
+                            제품 수정
+                        </Button>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

@@ -30,39 +30,63 @@ const AddClothes = (props) => {
     }
 
     return (
-        <Grid container style={{marginTop:20}}>
-            <Grid xs={12} md={12} item style={{margin: 20}}>
-                <Grid xs={6} md={6} item>
-                    title:
-                </Grid>
-                <Grid xs={6} md={6} item>
-                    <TextField name="title" value={item.title} onChange={onInputChange}/>
-                </Grid>
-                <Grid xs={6} md={6} item>
-                    category:
-                </Grid>
-                <Grid xs={6} md={6} item>
-                    <TextField name="category" value={item.category} onChange={onInputChange}/>
-                </Grid>
-                <Grid xs={6} md={6} item>
-                    price:
-                </Grid>
-                <Grid xs={6} md={6} item>
-                    <TextField name="price" value={item.price} onChange={onInputChange}/>
-                </Grid>
-                <Grid xs={6} md={6} item>
-                    userId:
-                </Grid>
-                <Grid xs={6} md={6} item>
-                    <TextField name="userId" value={item.userId} onChange={onInputChange}/>
+        <Grid container justifyContent="center" style={{ marginTop: 20 }}>
+            <Grid item xs={12} md={6} style={{ margin: 10 }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                        
+                        <TextField
+                            name="title"
+                            value={item.title}
+                            onChange={onInputChange}
+                            label="Title"
+                            variant="outlined"
+                            fullWidth
+                        />
+                    </Grid>
+                    <Grid item xs={12} >
+                        
+                        <TextField
+                            name="category"
+                            value={item.category}
+                            onChange={onInputChange}
+                            label="Category"
+                            variant="outlined"
+                            fullWidth
+                            margin="normal"
+                        />
+                    </Grid>
+                    <Grid item xs={12} >
+                        
+                        <TextField
+                            name="price"
+                            value={item.price}
+                            onChange={onInputChange}
+                            label="Price"
+                            variant="outlined"
+                            fullWidth
+                            margin="normal"
+                        />
+                    </Grid>
+                    <Grid item xs={12} >
+                        
+                        <TextField
+                            name="userId"
+                            value={item.userId}
+                            onChange={onInputChange}
+                            label="User ID"
+                            variant="outlined"
+                            fullWidth
+                            margin="normal"
+                        />
+                    </Grid>
+                    <Grid item xs={12} container justifyContent="center">
+                        <Button onClick={onButtonClick} variant="contained" color="warning" style={{ margin: 10 }}>
+                            제품 추가
+                        </Button>
+                    </Grid>
                 </Grid>
             </Grid>
-            <Grid xs={12} md={12} item style={{margin: 20}}>
-                <Button onClick={onButtonClick} variant="contained" color="warning">
-                    제품 추가
-                </Button>
-            </Grid>
-
         </Grid>
     );
 }
